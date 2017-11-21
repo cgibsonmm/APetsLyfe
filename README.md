@@ -22,3 +22,16 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Dev day 1
+ # starting fresh for cleaner dev
+
+
+
+
+ # please contact Cgibsonmm@gmail.com for any questions.
+
+
+
+ ruby 2.4.1p111 (probably should update soon)
+  
