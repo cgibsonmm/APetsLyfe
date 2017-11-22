@@ -1,4 +1,19 @@
-- @profiles.each do |profile|
-  = profile.user.username
-  = profile.user.id
-  = profile.about
+.row
+  %table.table.table-bordered
+    %thead
+      %tr
+        %th{'scope': 'col'} User Id
+        %th{'scope': 'col'} User Name
+        %th{'scope': 'col'} Last Sign In
+        %th{'scope': 'col'} Links
+    %tbody
+      - @profiles.each do |profile|
+        %tr
+          %td
+            = profile.user.id
+          %td
+            = profile.user.username
+          %td
+            = profile.user.last_sign_in_at.strftime('%m/%d/%y')
+          %td
+            = link_to 'Profile', user_profile_path(profile)

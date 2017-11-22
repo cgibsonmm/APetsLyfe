@@ -1,4 +1,6 @@
 class UserProfilesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @profiles = UserProfile.all
   end
@@ -23,6 +25,7 @@ class UserProfilesController < ApplicationController
   end
 
   def edit
+    @profile = UserProfile.find(params[:id])
   end
 
   private

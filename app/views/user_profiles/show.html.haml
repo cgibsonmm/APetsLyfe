@@ -1,2 +1,22 @@
-%h1 UserProfiles#show
-%p Find me in app/views/user_profiles/show.html.haml
+
+.row
+  .col-md-2
+  .card.mt-5.col-md-8.p-0
+    .card-header
+      %h3.text-center= @profile.user.username.capitalize
+    .card-body
+      .row
+        .col-4.br-1
+          Email:
+        .col-8
+          = @profile.user.email
+      .row
+        .col-4.br-1
+          About Me:
+        .col-8
+          = @profile.about
+      .row.pt-4
+        .col-4
+        .col-4
+          = link_to 'Edit Profile', edit_user_profile_path(@profile)
+          = link_to 'My animals', '#', class: 'ml-3'
