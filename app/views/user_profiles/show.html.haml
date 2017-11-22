@@ -16,7 +16,10 @@
         .col-8
           = @profile.about
       .row.pt-4
-        .col-4
-        .col-4
-          = link_to 'Edit Profile', edit_user_profile_path(@profile)
-          = link_to 'My animals', '#', class: 'ml-3'
+        .col-2
+        .col-8
+          - if current_user == @profile.user
+            = link_to 'Edit Profile', edit_user_profile_path(@profile)
+            = link_to 'My animals', '#', class: 'ml-3'
+          - else
+            = link_to 'profiles', user_profiles_path
