@@ -36,7 +36,6 @@ gem 'devise'
 gem 'simple_form'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'jquery-rails'
-gem 'haml'
 gem 'haml-rails', "~> 1.0"
 
 # Use Capistrano for deployment

@@ -1,0 +1,21 @@
+%nav.nav.navbar-expand-lg.navbar-light.bg-light
+  = link_to "APetsLyfe", root_path, class: 'navbar-brand mr-auto'
+  %button.navbar-toggler{'type': 'button', 'data-toggle': 'collapse',
+                         'data-target': '#mainNav',
+                         'aria-controls': 'mainNav',
+                         'aria-expanded': 'false',
+                         'aria-label': 'Toggle navagation'}
+    %span.navbar-toggler-icon
+
+  #mainNav.collapse.navbar-collapse
+    .navbar-nav.mr-auto
+      = link_to 'Home', '#', class: 'nav-item nav-link ml-2'
+      = link_to 'My Pets', '#', class: 'nav-item nav-link'
+      = link_to 'Services', '#', class: 'nav-item nav-link'
+    .navbar-nav
+      - if user_signed_in?
+        = link_to 'My Account', '#', class: 'nav-item nav-link'
+        = link_to 'Sign out', destroy_user_session_path, method: 'delete', class: 'nav-item nav-link'
+      - else
+        = link_to 'Sign in', new_user_session_path, class: 'nav-item nav-link'
+        = link_to 'Sign up', new_user_registration_path, class: 'nav-item nav-link'
