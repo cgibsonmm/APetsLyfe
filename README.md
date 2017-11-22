@@ -24,14 +24,16 @@ Things you may want to cover:
 * ...
 
 Dev day 1
- # starting fresh for cleaner dev
+  starting fresh for cleaner dev
 
 
 
 
- # please contact Cgibsonmm@gmail.com for any questions.
+ please contact Cgibsonmm@gmail.com for any questions.
 
 
 
  ruby 2.4.1p111 (probably should update soon)
-  
+
+ ToDo
+  - need tests for models
