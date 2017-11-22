@@ -14,10 +14,10 @@ class UserProfilesController < ApplicationController
   def create
     @profile = current_user.build_user_profile(profile_params)
     if @profile.save
-      flash[:success] = 'Your profile has been saved'
+      flash.now[:success] = 'Your profile has been saved'
       redirect_to user_profiles_path
     else
-      flash[:warning] = "Error creating Profile"
+      flash.now[:warning] = "Error creating Profile"
       render 'new'
     end
   end
@@ -30,10 +30,10 @@ class UserProfilesController < ApplicationController
 
   def update
     if @profile.update_attributes(update_params)
-      flash[:notice] = 'Your profile has been updated'
+      flash.now[:notice] = 'Your profile has been updated'
       redirect_to @profile
     else
-      flash[:error] = 'Error updating profile'
+      flash.now[:error] = 'Error updating profile'
       render 'edit'
     end
   end
@@ -43,7 +43,7 @@ class UserProfilesController < ApplicationController
   def profile_owner?
     find_profile
     unless user_signed_in? && @profile.user_id == current_user.id
-      flash[:error] = 'You must own this profile to make changes'
+      flash.now[:error] = 'You must own this profile to make changes'
       render 'show'
     end
   end
