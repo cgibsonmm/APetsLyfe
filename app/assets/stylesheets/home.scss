@@ -1,6 +1,21 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#nav1 {
+  background-color: #328CC1;
+  
+  .navbar-brand{
+    font-family: 'Roboto Slab', serif;
+    color: #D9B310;
+
+  }
+}
+
+body{
+  background-color: gray;
+}
+
 #mainBox {
   background-color: rgb(168, 160, 122);
   width: 100% auto;
@@ -12,4 +27,13 @@
   width: 100% auto;
   height: 150px;
   border: 1px solid black;
+}
+
+.petphoto{
+  background-color:red;
+  witdth: 100% auto;
+  height: 200px;
+}
+.card{
+  background-color: #FAF5AE;
 }

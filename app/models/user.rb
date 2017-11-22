@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_one :user_profile
 
   validates :username, format: { with: /[a-z]+\d+|[a-z]+\_?[a-z]+\d*/ }
-  validates :username, length: { in: 4..12}
+  validates :username, length: { in: 4..12 }
   validates :username, uniqueness: true
 end
