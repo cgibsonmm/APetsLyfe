@@ -1,3 +1,15 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#mainBox {
+  background-color: rgb(168, 160, 122);
+  width: 100% auto;
+  height: 300px;
+}
+
+.smallBox {
+  background-color: rgb(141, 105, 152);
+  width: 100% auto;
+  height: 150px;
+  border: 1px solid black;
+}
