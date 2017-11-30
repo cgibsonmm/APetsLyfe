@@ -1,4 +1,15 @@
 = simple_form_for @profile do |f|
-  = f.input :avatar
-  = f.input :about, label: 'About me', placeholder: 'Use this area for a quick discription about yourself'
+  .row
+    .col-8
+      = f.input :avatar
+  .row
+    .col-8
+      = f.input :about, label: 'About me', placeholder: 'Use this area for a quick discription about yourself'
+  .row
+    .col-1
+      = f.input :age, collection: 18..65, prompt: "Select your age", selected: 21
+  .row
+  = f.input :city
+  = f.input :state, collection: states_list
+  = f.input :zip_code
   = f.submit
