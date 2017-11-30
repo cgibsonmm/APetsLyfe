@@ -6,20 +6,18 @@
       %h3.text-center= @profile.user.username.capitalize
     .card-body
       .row
-        .col-4.br-1
-          Email:
-        .col-8
-          = @profile.user.email
-      .row
-        .col-4.br-1
-          About Me:
-        .col-8
-          = @profile.about
-      .row.pt-4
-        .col-2
-        .col-8
-          - if current_user == @profile.user
-            = link_to 'Edit Profile', edit_user_profile_path(@profile)
-            = link_to 'My animals', '#', class: 'ml-3'
-          - else
-            = link_to 'profiles', user_profiles_path
+        .col-5
+          = image_tag @profile.avatar.url(:thumb)
+        .col-7
+          .row
+            Email:
+            = @profile.user.email
+          .row
+            About Me:
+            = @profile.about
+          .row.pt-4
+            - if current_user == @profile.user
+              = link_to 'Edit Profile', edit_user_profile_path(@profile)
+              = link_to 'My animals', '#', class: 'ml-3'
+            - else
+              = link_to 'profiles', user_profiles_path
