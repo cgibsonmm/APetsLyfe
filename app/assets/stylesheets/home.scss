@@ -4,22 +4,33 @@
 
 #nav1 {
   background-color: #328CC1;
-  
+  box-shadow: 1px 1px 2px #2a2a2a;
+
   .navbar-brand{
     font-family: 'Roboto Slab', serif;
     color: #D9B310;
-
+    text-shadow: 1px 1px 2px black;
+    font-size: 1.8em;
   }
 }
 
 body{
-  background-color: gray;
+  background-color: #D9DCD6;
+
+  #bottom-border{
+    background-color: rgb(159, 176, 169);
+    height:12px;
+    width:100% auto;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
 }
 
 #mainBox {
   background-color: rgb(168, 160, 122);
   width: 100% auto;
   height: 300px;
+  border: 1px solid black;
 }
 
 .smallBox {
@@ -35,5 +46,5 @@ body{
   height: 200px;
 }
 .card{
-  background-color: #FAF5AE;
+  background-color: #81C3D7;
 }
