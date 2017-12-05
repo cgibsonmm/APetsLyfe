@@ -4,7 +4,7 @@
   .card.mt-5.col-md-8.p-0
     .card-header
       %h3.text-center= @profile.user.username.capitalize
-    .card-body
+    .card-body.mx-3
       .row
         .col-5
           = image_tag @profile.avatar.url(:thumb)
@@ -15,6 +15,15 @@
           .row
             About Me:
             = @profile.about
+          .row
+            City:
+            = @profile.city.capitalize
+          .row
+            Zip Code:
+            = @profile.zip_code
+          .row
+            State:
+            = @profile.state.upcase
           .row.pt-4
             - if current_user == @profile.user
               = link_to 'Edit Profile', edit_user_profile_path(@profile)

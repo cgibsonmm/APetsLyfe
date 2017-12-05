@@ -53,7 +53,7 @@ class UserProfilesController < ApplicationController
   end
 
   def update_params
-    params.require(:user_profile).permit(:about)
+    params.require(:user_profile).permit(:about, :avatar, :age, :city, :state, :zip_code)
   end
 
   def profile_params
