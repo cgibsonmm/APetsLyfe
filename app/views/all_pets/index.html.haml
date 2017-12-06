@@ -1,7 +1,10 @@
-All Pets
-
-- @pets.each do |pet|
-  = pet.name
-  %nbdp :
-  = pet.user.username
-  %br
+%h1.text-center All Pets
+.row
+  .col-lg-2
+  .col-lg-8
+    .row
+      - @pets.each do |pet|
+        .col-lg-3.col-sm-4.col-6.text-center.pet_container
+          = pet.name
+          %nbdp :
+          = pet.user.username
