@@ -1,0 +1,6 @@
+Add a new pet
+= simple_form_for([current_user, @pet]) do |f|
+  = f.input :name
+  = f.input :date_of_birth
+  = f.input :type
+  = f.submit

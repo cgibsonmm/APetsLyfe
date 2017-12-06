@@ -26,14 +26,17 @@
 #                          PATCH  /user_profiles/:id(.:format)      user_profiles#update
 #                          PUT    /user_profiles/:id(.:format)      user_profiles#update
 #                          DELETE /user_profiles/:id(.:format)      user_profiles#destroy
-# 
+#
 
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations'}
   get 'welcome/index'
   root "home#index"
 
-
+  resources :all_pets, only: [:index]
+  resources :user do
+    resources :pets
+  end
   resources :user_profiles
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

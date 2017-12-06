@@ -7,7 +7,7 @@
     .card-body.mx-3
       .row
         .col-5
-          = image_tag @profile.avatar.url(:thumb)
+          = image_tag @profile.avatar.url(:thumb), alt: 'This should be a photo'
         .col-7
           .row
             Email:
@@ -27,6 +27,6 @@
           .row.pt-4
             - if current_user == @profile.user
               = link_to 'Edit Profile', edit_user_profile_path(@profile)
-              = link_to 'My animals', '#', class: 'ml-3'
+              = link_to 'My animals', user_pets_path(:id), class: 'ml-3'
             - else
               = link_to 'profiles', user_profiles_path

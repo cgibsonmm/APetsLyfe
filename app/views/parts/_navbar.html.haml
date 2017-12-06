@@ -13,7 +13,7 @@
       #mainNav.collapse.navbar-collapse
         .navbar-nav.mr-auto.pt-1
           = link_to 'Temp index link', user_profiles_path, class: 'nav-item nav-link ml-2'
-          = link_to 'My Pets', '#', class: 'nav-item nav-link'
+          = link_to 'My Pets', user_pets_path(:id), class: 'nav-item nav-link'
           = link_to 'Services', '#', class: 'nav-item nav-link'
         .navbar-nav.pt-1
           - if user_signed_in?

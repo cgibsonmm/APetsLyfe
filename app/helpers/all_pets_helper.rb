@@ -1,0 +1,2 @@
+module AllPetsHelper
+end
