@@ -16,6 +16,12 @@
 #  state               :string
 #  zip_code            :integer
 #
+# Indexes
+#
+#  index_user_profiles_on_city      (city)
+#  index_user_profiles_on_user_id   (user_id)
+#  index_user_profiles_on_zip_code  (zip_code)
+#
 
 class UserProfile < ApplicationRecord
   belongs_to :user, dependent: :destroy

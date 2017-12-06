@@ -17,6 +17,12 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #
+# Indexes
+#
+#  index_users_on_email                 (email) UNIQUE
+#  index_users_on_reset_password_token  (reset_password_token) UNIQUE
+#  index_users_on_username              (username) UNIQUE
+#
 
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
@@ -25,6 +31,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :user_profile
+  has_many :pets
 
   validates :username, format: { with: /[a-z]+\d+|[a-z]+\_?[a-z]+\d*/ }
   validates :username, length: { in: 4..12 }
