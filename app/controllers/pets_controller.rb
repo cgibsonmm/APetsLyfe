@@ -1,6 +1,6 @@
 class PetsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @pets = current_user.pets.all
   end
@@ -29,6 +29,6 @@ class PetsController < ApplicationController
   private
 
   def pet_params
-    params.require(:pet).permit(:name, :age, :user_id)
+    params.require(:pet).permit(:name, :age, :user_id, :avatar)
   end
 end

@@ -5,6 +5,7 @@
     .row
       - @pets.each do |pet|
         .col-lg-3.col-sm-4.col-6.text-center.pet_container
+          = image_tag pet.avatar.url(:thumb), alt: 'this should be a photo', class: 'img-fluid'
           = pet.name
           %nbdp :
           = pet.user.username
