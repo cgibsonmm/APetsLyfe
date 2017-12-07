@@ -7,7 +7,12 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = render 'parts/navbar'
-    .container
-      = render 'parts/flash'
-      = yield
+    -# = render 'parts/navbar'
+    -# .container
+    -#   = render 'parts/flash'
+    -#   = yield
+
+    %form#form{'method': 'post'}
+      %input#upload{'type': 'file', 'value': 'chose a file'}
+      #upload-demo
+      %input#imagebase64{'type': 'hidden', 'name': 'imagebase64'}
