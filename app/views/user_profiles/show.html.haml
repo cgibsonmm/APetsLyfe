@@ -7,7 +7,7 @@
     .card-body.mx-3
       .row
         .col-5
-          = image_tag @profile.avatar.url(:thumb), alt: 'This should be a photo'
+          = display_profile_image(@profile)
         .col-7
           .row
             Email:
