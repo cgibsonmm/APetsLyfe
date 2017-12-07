@@ -24,6 +24,9 @@
           .row
             State:
             = @profile.state.upcase
+          .row
+            Year of birth:
+            = year_of_birth(@profile.age)
           .row.pt-4
             - if current_user == @profile.user
               = link_to 'Edit Profile', edit_user_profile_path(@profile)

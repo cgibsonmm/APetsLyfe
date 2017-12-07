@@ -12,4 +12,11 @@ module UserProfilesHelper
       image_tag profile.avatar.url(:thumb), alt: 'where are you', class: 'img-fluid'
     end
   end
+
+
+  def year_of_birth(age)
+    year = Time.now.year
+    year - age
+  end
+
 end
