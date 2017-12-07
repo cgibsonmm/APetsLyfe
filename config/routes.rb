@@ -37,6 +37,10 @@ Rails.application.routes.draw do
   resources :user do
     resources :pets
   end
-  resources :user_profiles
+  resources :user_profiles do
+    member do
+      get :add_profile_image
+    end
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

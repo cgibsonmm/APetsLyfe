@@ -7,33 +7,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    -# = render 'parts/navbar'
-    -# .container
-    -#   = render 'parts/flash'
-    -#   = yield
-
-    %button.btn.btn-primary.mx-auto.my-5{'data-toggle': 'modal', 'data-target': '#testModal'}
-      Add Image
-    %br
-    %br
-
-    -# modal test
-
-    .modal.fade#testModal{ 'tabindex': "-1", 'role': "dialog", 'aria-labelledby': "testModalLabel", 'aria-hidden': "true"}
-      .modal-dialog.modal-lg{'role': "document"}
-        .modal-content
-          .modal-header
-            %h5.modal-title#testModalLabel Crop Image
-            %button.close{'type': "button", 'data-dismiss': "modal", 'aria-label': "Close"}
-              %span{'aria-hidden': "true"} &times;
-
-          .modal-body
-            %form#form{'method': 'post'}
-              %input#upload{'type': 'file', 'value': 'chose a file'}
-              #upload-demo
-              %input#imagebase64{'type': 'hidden', 'name': 'imagebase64'}
-            #upload-demo
-
-          .modal-footer
-            %button.btn.btn-secondary{'type': "button", 'data-dismiss': "modal"} Close
-            %button.btn.btn-success{'type': "button"} Save changes
+    = render 'parts/navbar'
+    .container
+      = render 'parts/flash'
+      = yield

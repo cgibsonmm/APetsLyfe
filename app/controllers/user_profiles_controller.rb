@@ -1,6 +1,6 @@
 class UserProfilesController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_profile, only: [:show, :edit, :update]
+  before_action :find_profile, only: [:show, :edit, :edit_profile_image, :update, :update_profile_image]
   before_action :profile_owner?, only: [:edit, :update]
 
   def index
@@ -19,6 +19,19 @@ class UserProfilesController < ApplicationController
     else
       flash.now[:warning] = "Error creating Profile"
       render 'new'
+    end
+  end
+
+  def edit_profile_image
+  end
+
+  def update_profile_image
+    if @profile.update_attributes(image_params)
+      flash.now[:success] = 'Updated profile photo'
+      redirect_to @profile
+    else
+      flash.now[:notice] = 'Error saving image'
+      render 'edit_profile_image'
     end
   end
 
@@ -53,10 +66,14 @@ class UserProfilesController < ApplicationController
   end
 
   def update_params
-    params.require(:user_profile).permit(:about, :avatar, :age, :city, :state, :zip_code)
+    params.require(:user_profile).permit(:about, :age, :city, :state, :zip_code)
   end
 
   def profile_params
-    params.require(:user_profile).permit(:about, :avatar, :user_id, :age, :city, :state, :zip_code)
+    params.require(:user_profile).permit(:about, :user_id, :age, :city, :state, :zip_code)
+  end
+
+  def image_params
+    params.require(:user_profile).permit(:avatar)
   end
 end

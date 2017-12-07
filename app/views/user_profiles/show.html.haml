@@ -8,6 +8,7 @@
       .row
         .col-5
           = image_tag @profile.avatar.url(:thumb), alt: 'This should be a photo'
+          = link_to 'Edit Profile Photo', add_profile_image_user_profile_path(@profile)
         .col-7
           .row
             Email:
