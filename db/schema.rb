@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171206230644) do
+ActiveRecord::Schema.define(version: 20171207212724) do
 
   create_table "pets", force: :cascade do |t|
     t.integer "user_id"
@@ -39,6 +39,12 @@ ActiveRecord::Schema.define(version: 20171206230644) do
     t.string "city"
     t.string "state"
     t.integer "zip_code"
+    t.integer "avatar_original_w"
+    t.integer "avatar_original_h"
+    t.integer "avatar_crop_x"
+    t.integer "avatar_crop_y"
+    t.integer "avatar_crop_w"
+    t.integer "avatar_crop_h"
     t.index ["city"], name: "index_user_profiles_on_city"
     t.index ["user_id"], name: "index_user_profiles_on_user_id"
     t.index ["zip_code"], name: "index_user_profiles_on_zip_code"

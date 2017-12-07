@@ -15,6 +15,12 @@
 #  city                :string
 #  state               :string
 #  zip_code            :integer
+#  avatar_original_w   :integer
+#  avatar_original_h   :integer
+#  avatar_crop_x       :integer
+#  avatar_crop_y       :integer
+#  avatar_crop_w       :integer
+#  avatar_crop_h       :integer
 #
 # Indexes
 #
