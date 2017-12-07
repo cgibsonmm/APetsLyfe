@@ -1,0 +1,15 @@
+.row
+  .col-2
+  .col-8
+    .card
+      .card-header.text-center
+        %h4 Crop your image
+      .card-body
+        = form_for @profile do |f|
+          .row
+            .col-6.justify
+              = f.cropbox :avatar, width: 200
+          .row
+            .col-4
+              = f.crop_preview :avatar, width: 100
+          = f.submit 'Save', class: 'btn btn-primary'
