@@ -1,34 +1,17 @@
-.row.pt-3.m-0
-  .col-lg-7.p-0
-    #mainBox
-      This is a placeholder
-  .col-lg-5.p-0
-    .row.m-0
-      .smallBox.col-6
-        This is a placeholder
-      .smallBox.col-6
-        This is a placeholder
-    .row.m-0
-      .smallBox.col-6
-        This is a placeholder
-      .smallBox.col-6
-        This is a placeholder
-.row.pt-3
-  #bottom-border.col-12
-.row.pt-2
-  .col-lg-12
-    .card
-      .card-body
-        .row#pet
-          .petphoto.col-4
-            picture
-          .col-3
-            .row
-              %h5 My Pets Name
-            .row
-              7/24/1999
-
-        .row#pet2 picture
-        .row#pet3 picture
-        .row picture
-  .col-lg-1
+= render 'parts/carousel'
+.row.pt-4.ml-0
+  .col-lg-6.card.p-5
+    %h3.text-center
+      MyPetsLyfe
+    %p.text-center
+      A community to bond and chat with animal and pet lovers just like you,
+      A website where you can create a profile for your pet and organize your
+      pets life in just one click, find pet stores, animal shelters, dog parks,
+      animal hospitals near you.  You can interact with other people with
+      similar interests and learn more about your pet. Share your pets special
+      moments by up loading a picture or Video onto your pets page and sharing
+      it with love ones or with the online community. Never lose sight on
+      what’s most important for your pets life. Let’s make your life and your
+      pets life easier.
+  .col-lg-6#sign_in_part
+    = render 'devise/sessions/new'

@@ -1,9 +1,19 @@
-- @pets.each do |pet|
-  = pet.name
-  %br
+= render 'parts/carousel'
 
 
-%br
+
+%ul.nav.nav-tabs
+  - @pets.each_with_index do |pet, i|
+    %li.nav-item
+      %p.nav-link.pet{'href': '#', class: "pet-#{i}"}
+        = pet.name
+
+- @pets.each_with_index do |pet, i|
+  .card{ class: "card-#{i}"}
+    = pet.name
+
+
+
 
 
 = link_to 'Add new animal', new_user_pet_path(:id)
