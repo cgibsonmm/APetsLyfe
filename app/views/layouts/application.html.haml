@@ -10,4 +10,7 @@
     = render 'parts/navbar'
     .container
       = render 'parts/flash'
-      = yield
+      - if user_signed_in?
+        = yield
+      - else
+        = render 'layouts/landing'
