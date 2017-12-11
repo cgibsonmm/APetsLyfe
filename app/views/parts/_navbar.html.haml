@@ -1,7 +1,7 @@
 
-%nav#nav1.nav.navbar-expand-lg.navbar-dark.p-3
+%nav#nav1.nav.navbar-expand-lg.navbar-dark.p-lg-3
   .container
-    .row.mx-1
+    .row
       = link_to "APetsLyfe", signed_in_link, class: 'navbar-brand ml-1 mr-auto pl-2', id: 'navER'
       %button.navbar-toggler{'type': 'button', 'data-toggle': 'collapse',
                              'data-target': '#mainNav',
@@ -10,13 +10,13 @@
                              'aria-label': 'Toggle navagation'}
         %span.navbar-toggler-icon
 
-      #mainNav.collapse.navbar-collapse
-        .navbar-nav.mr-auto.pt-1
-          = link_to 'Temp index link', user_profiles_path, class: 'nav-item nav-link ml-2'
+      #mainNav.collapse.navbar-collapse.pt-lg-2
+        .navbar-nav.ml-lg-auto
+          = link_to 'Temp index link', user_profiles_path, class: 'nav-item nav-link'
           = link_to 'All Pets', all_pets_path, class: 'nav-item nav-link'
           = link_to 'My Pets', user_pets_path(:id), class: 'nav-item nav-link'
           = link_to 'Services', '#', class: 'nav-item nav-link'
-        .navbar-nav.pt-1
+        .navbar-nav.ml-auto.pr-lg-2
           - if user_signed_in?
             = link_to 'My Profile', user_profile_path(current_user), class: 'nav-item nav-link'
             = link_to 'Sign out', destroy_user_session_path, method: 'delete', class: 'nav-item nav-link'
