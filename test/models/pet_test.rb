@@ -13,6 +13,12 @@
 #  avatar_content_type :string
 #  avatar_file_size    :integer
 #  avatar_updated_at   :datetime
+#  avatar_original_w   :integer
+#  avatar_original_h   :integer
+#  avatar_crop_x       :integer
+#  avatar_crop_y       :integer
+#  avatar_crop_w       :integer
+#  avatar_crop_h       :integer
 #
 # Indexes
 #

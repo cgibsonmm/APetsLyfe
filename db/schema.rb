@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171207212724) do
+ActiveRecord::Schema.define(version: 20171211212419) do
 
   create_table "pets", force: :cascade do |t|
     t.integer "user_id"
@@ -23,6 +23,12 @@ ActiveRecord::Schema.define(version: 20171207212724) do
     t.string "avatar_content_type"
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer "avatar_original_w"
+    t.integer "avatar_original_h"
+    t.integer "avatar_crop_x"
+    t.integer "avatar_crop_y"
+    t.integer "avatar_crop_w"
+    t.integer "avatar_crop_h"
     t.index ["user_id"], name: "index_pets_on_user_id"
   end
 
