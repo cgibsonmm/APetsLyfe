@@ -22,7 +22,27 @@
 require 'test_helper'
 
 class PetTest < ActiveSupport::TestCase
+
+  # Sets up a valid pet
+  def setup
+    @pet = Pet.new(
+      name: 'Test_pet',
+      date_of_birth: 2016-07-04,
+    )
+  end
   # test "the truth" do
   #   assert true
   # end
+
+  test "name must be present" do
+    @pet.name = ''
+    assert_not @pet.save, 'name is empty and being saved'
+  end
+
+  test "name must be three or more chars" do
+    @pet.name = 'a'
+    assert_not @pet.save
+    @pet.name = 'fido'
+    assert_response @pet.save, true
+  end
 end
