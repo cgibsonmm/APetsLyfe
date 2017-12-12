@@ -14,49 +14,71 @@
   }
 }
 
-#nav1 {
-  background-color: #328CC1;
-  box-shadow: 1px 1px 2px #2a2a2a;
-
-  .navbar-brand{
-    font-family: 'Roboto Slab', serif;
-    color: #D9B310;
-    text-shadow: 1px 1px 2px black;
-    font-size: 1.8em;
-  }
-}
-
 body{
-  background-color: #D9DCD6;
+  // #landing-area{
+  //   /* Location of the image */
+  //   // background-image: url('background-3.jpg');
+  //
+  //   /* Background image is centered vertically and horizontally at all times */
+  //   background-position: center center;
+  //
+  //   /* Background image doesn't tile */
+  //    background-repeat: no-repeat;
+  //
+  //   /* Background image is fixed in the viewport so that it doesn't move when
+  //   the content's height is greater than the image's height */
+  //   background-attachment: fixed;
+  //
+  //   /* This is what makes the background image rescale based
+  //   on the container's size */
+  //   background-size: cover;
+  //
+  //   /* Set a background color that will be displayed
+  //   while the background image is loading */
+  //   background-color: #464646;
+  // }
+
+  .layer{
+    height: 100% auto;
+    width: 100% auto;
+    background-color: rgba(223, 223, 223, 0.90);
+  }
+
 
   #bottom-border{
-    background-color: rgb(159, 176, 169);
-    height:12px;
-    width:100% auto;
+    background-color: rgba(159, 176, 169, 0.10);
+    height:50px;
+    width: 100%;
     border-radius: 5px;
+  }
+
+  #mainBox {
+    background-color: rgb(168, 160, 122);
+    width: 100% auto;
+    height: 300px;
     border: 1px solid black;
   }
-}
 
-#mainBox {
-  background-color: rgb(168, 160, 122);
-  width: 100% auto;
-  height: 300px;
-  border: 1px solid black;
-}
+  .smallBox {
+    background-color: rgb(141, 105, 152);
+    width: 100% auto;
+    height: 150px;
+    border: 1px solid black;
+  }
 
-.smallBox {
-  background-color: rgb(141, 105, 152);
-  width: 100% auto;
-  height: 150px;
-  border: 1px solid black;
-}
-
-.petphoto{
-  background-color:red;
-  witdth: 100% auto;
-  height: 200px;
-}
-.card{
-  background-color: #81C3D7;
+  .petphoto{
+    background-color:red;
+    witdth: 100% auto;
+    height: 200px;
+  }
+  .site-discription{
+    h3{
+      font-family: 'Vollkorn SC', serif;
+      color: #D3B33E;
+      text-shadow: -1px 1px 3px black;
+    }
+    p{
+      font-family: 'Comfortaa', cursive;
+    }
+  }
 }

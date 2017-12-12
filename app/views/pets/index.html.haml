@@ -9,9 +9,9 @@
   .tab-content
     - @pets.each_with_index do |pet, i|
       .col-lg-8.pet-card{ class: "card-#{i}"}
-        %h3.pet-name= pet.name
+        %h3.pet-name.pt-2= pet.name
         .row
-          .col-5.pet_image
+          .col-5.pet_image.pt-2
             = image_tag pet.avatar.url(:medium), class: 'img-fluid'
           .col-7
             = pet.date_of_birth.strftime("Birthday: %b %d %Y")
