@@ -1,15 +1,20 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+# Script for pets
+# Todo: need sizing for screens
 $(document).on('turbolinks:load', ->
   $('.pet').each (index)->
-    if index > 0
+    if index == 0
+      $(this).addClass('active')
+    else if index > 0
       $('.card-' + index).addClass('hidden')
 
   $('.pet').each (index)->
     $this_pet = $(this)
+
     $($this_pet).click ->
       $this_card = $('.card-' + index)
 
-      $($this_card).toggle('slow')
+      $($this_pet).addClass('active')
+      $($this_card).slideToggle('slow')
+      $('.pet-card').not($this_card).slideUp('slow')
+      $('.nav-link').not($this_pet).removeClass('active')
 )
