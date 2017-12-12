@@ -1,20 +1,24 @@
 # Script for pets
 # Todo: need sizing for screens
 $(document).on('turbolinks:load', ->
+  $activePet = $('.pet-0')
+  $activeCard = $('.card-0')
+  # adds active class to first pet and hides others
   $('.pet').each (index)->
     if index == 0
-      $(this).addClass('active')
+      $('.pet-'+ index).addClass('active')
     else if index > 0
-      $('.card-' + index).addClass('hidden')
+      $('.card-' + index).hide()
+
 
   $('.pet').each (index)->
-    $this_pet = $(this)
-
-    $($this_pet).click ->
-      $this_card = $('.card-' + index)
-
-      $($this_pet).addClass('active')
-      $($this_card).slideToggle('slow')
-      $('.pet-card').not($this_card).slideUp('slow')
-      $('.nav-link').not($this_pet).removeClass('active')
+    $('.pet-'+ index).click(->
+      $($activeCard).fadeOut(500, ->(
+        $activeCard = $('.card-'+ index)
+        $($activeCard).fadeIn(500)
+      ))
+      $activePet = $(this)
+      $($activePet).addClass('active')
+      $('.pet').not(this).removeClass('active')
+    )
 )

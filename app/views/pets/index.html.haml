@@ -1,6 +1,5 @@
 = render 'parts/carousel'
 
-
 .pet_cards.mt-3
   .nav.nav-tabs
     - @pets.each_with_index do |pet, i|
@@ -10,10 +9,10 @@
   .tab-content
     - @pets.each_with_index do |pet, i|
       .col-lg-8.pet-card{ class: "card-#{i}"}
-        = pet.name
+        %h3.pet-name= pet.name
         .row
-          .col-5
-            = image_tag pet.avatar.url(:thumb), class: 'img-responsive'
+          .col-5.pet_image
+            = image_tag pet.avatar.url(:medium), class: 'img-fluid'
           .col-7
             = pet.date_of_birth.strftime("Birthday: %b %d %Y")
             %br

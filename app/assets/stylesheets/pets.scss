@@ -7,4 +7,20 @@
 
 .pet_cards {
   background-color: white;
+
+  .nav-tabs{
+    font-size: 1.1em;
+    font-family: 'Special Elite', cursive;
+  }
+
+  .pet-name{
+    text-decoration: underline;
+  }
+
+  .pet_image{
+  }
+
+  div *{
+    font-family: 'Special Elite', cursive;
+  }
 }
