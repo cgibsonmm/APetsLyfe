@@ -9,8 +9,22 @@
         = pet.name
 
 - @pets.each_with_index do |pet, i|
-  .card{ class: "card-#{i}"}
-    = pet.name
+  .row.px-3
+    .card.col-lg-8{ class: "card-#{i}"}
+      .row
+        .col-1
+        .col-5
+          = pet.name
+      .row
+        .col-5
+          = image_tag pet.avatar.url(:thumb), class: 'img-responsive'
+        .col-7
+          = pet.date_of_birth.strftime("Birthday: %b %d %Y")
+          %br
+          age:
+          = calculate_pets_age(pet.date_of_birth)
+      .row
+        = link_to "Edit #{pet.name}", edit_user_pet_path(current_user, pet.id)
 
 
 

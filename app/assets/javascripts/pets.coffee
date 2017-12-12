@@ -3,7 +3,13 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).on('turbolinks:load', ->
   $('.pet').each (index)->
-    $('.pet-'+ index).click ->
-      $('.card-' + index).toggle('slow')
+    if index > 0
+      $('.card-' + index).addClass('hidden')
+
+  $('.pet').each (index)->
+    $this_pet = $(this)
+    $($this_pet).click ->
+      $this_card = $('.card-' + index)
+
+      $($this_card).toggle('slow')
 )
-# add active class

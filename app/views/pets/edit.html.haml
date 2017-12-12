@@ -1,2 +1,8 @@
-%h1 Pets#edit
-%p Find me in app/views/pets/edit.html.haml
+%h3
+  = "Edit #{@pet.name}"
+= simple_form_for([current_user, @pet]) do |f|
+  = f.input :avatar
+  = f.input :name
+  = f.input :date_of_birth
+  = f.input :type
+  = f.submit
