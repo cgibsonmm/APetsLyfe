@@ -7,7 +7,7 @@ module UserProfilesHelper
 
   def display_profile_image(profile)
     if profile.avatar_file_name.nil?
-      image_tag 'blank_img.jpg'
+      image_tag 'blank_img.jpg', class: 'img-fluid'
     else
       image_tag profile.avatar.url(:thumb), alt: 'where are you', class: 'img-fluid'
     end
