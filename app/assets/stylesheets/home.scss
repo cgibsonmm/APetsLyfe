@@ -15,6 +15,7 @@
 }
 
 body{
+  background-color: #FEFEFE;
   // #landing-area{
   //   /* Location of the image */
   //   // background-image: url('background-3.jpg');
@@ -41,18 +42,18 @@ body{
   .layer{
     height: 100% auto;
     width: 100% auto;
-    background-color: rgba(223, 223, 223, 0.90);
+    background-color: #FFE5A7;
   }
 
   #bottom-border{
-    background-color: rgba(159, 176, 169, 0.10);
+    background-color: #5A5AC7;
     height:50px;
     width: 100%;
     border-radius: 5px;
   }
 
   #mainBox {
-    background-color: rgb(168, 160, 122);
+    background-color: #99C2E1;
     width: 100% auto;
     height: 300px;
     border: 1px solid black;
@@ -77,8 +78,8 @@ body{
   .site-discription{
     h3{
       font-family: 'Vollkorn SC', serif;
-      color: #D3B33E;
-      text-shadow: -1px 1px 3px black;
+      color: #4B8BBD;
+      text-shadow: -1px 1px 3px #99C2E1;
     }
     p{
       font-family: 'Comfortaa', cursive;
