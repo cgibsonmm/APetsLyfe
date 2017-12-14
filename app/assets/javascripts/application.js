@@ -14,6 +14,7 @@
 //= require turbolinks
 //= require jquery3
 //= require jquery.jcrop
+//= require jquery.slick
 //= require papercrop
 //= require popper
 //= require bootstrap-sprockets
