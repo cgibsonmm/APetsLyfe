@@ -38,7 +38,7 @@ gem 'jquery-rails'
 gem 'haml-rails', "~> 1.0"
 gem "paperclip", "~> 5.0.0"
 gem 'papercrop'
-gem "jquery-slick-rails"
+# gem "jquery-slick-rails"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

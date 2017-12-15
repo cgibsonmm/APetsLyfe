@@ -1,7 +1,9 @@
 .row.pt-3.m-0
   .col-lg-7.p-0
     .main-box
-      = render 'parts/working_carousel'
+      - @pets.each do |pet|
+        .photo= image_tag pet.avatar.url(:medium)
+
   .col-lg-5.p-0#small_image_boxes
     .row.m-0
       .small-box.col-6
