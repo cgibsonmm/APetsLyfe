@@ -1,87 +1,63 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 @media (max-width: 576px) {
-  #sign_in_part{
-    display: none;
+  .sign-in-part {
+    display: non;
   }
 }
 
 @media (min-width: 992px) {
-  #sign_in_part{
+  .sign-in-part {
     display: inline;
   }
 }
 
-body{
-  background-color: #FEFEFE;
-  // #landing-area{
-  //   /* Location of the image */
-  //   // background-image: url('background-3.jpg');
-  //
-  //   /* Background image is centered vertically and horizontally at all times */
-  //   background-position: center center;
-  //
-  //   /* Background image doesn't tile */
-  //    background-repeat: no-repeat;
-  //
-  //   /* Background image is fixed in the viewport so that it doesn't move when
-  //   the content's height is greater than the image's height */
-  //   background-attachment: fixed;
-  //
-  //   /* This is what makes the background image rescale based
-  //   on the container's size */
-  //   background-size: cover;
-  //
-  //   /* Set a background color that will be displayed
-  //   while the background image is loading */
-  //   background-color: #464646;
-  // }
+body {
+  background-color: #fefefe;
 
-  .layer{
+  .layer {
+    background-color: rgba(#ffd65b, .5);
     height: 100% auto;
     width: 100% auto;
-    background-color: rgba(#ffd65b, 0.5);
+
   }
 
-  #bottom-border{
-    background-color: #5A5AC7;
-    height:50px;
-    width: 100%;
+  .bottom-border {
+    background-color: #5a5ac7;
     border-radius: 5px;
+    height: 50px;
+    width: 100%;
   }
 
-  #mainBox {
-    background-color: #99C2E1;
-    width: 100% auto;
+  .main-box {
+    background-color: #99c2e1;
+    border: 1px solid black;
     height: 300px;
-    border: 1px solid black;
-
-    #main-carousel{
-      height: 100% !important;
-    }
-  }
-
-  .smallBox {
-    background-color: rgb(141, 105, 152);
     width: 100% auto;
-    height: 150px;
-    border: 1px solid black;
   }
 
-  .petphoto{
-    background-color:red;
-    witdth: 100% auto;
-    height: 200px;
+  .small-box {
+    background-color: rgb(141, 105, 152);
+    border: 1px solid #000;
+    height: 150px;
+    width: 100% auto;
   }
-  .site-discription{
-    h3{
+
+  .petphoto {
+    background-color: #f00;
+    height: 200px;
+    width: 100% auto;
+  }
+
+  .site-discription {
+    h3 {
+      color: #4b8bbd;
       font-family: 'Vollkorn SC', serif;
-      color: #4B8BBD;
-      text-shadow: -1px 1px 3px black;
+      text-shadow: -1px 1px 3px #000;
     }
-    p{
+
+    p {
       font-family: 'Comfortaa', cursive;
     }
   }
