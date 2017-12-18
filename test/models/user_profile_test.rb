@@ -32,7 +32,7 @@
 require 'test_helper'
 
 class UserProfileTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test 'creates a valid user profile' do
+    
+  end
 end
