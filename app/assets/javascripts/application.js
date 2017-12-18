@@ -16,5 +16,6 @@
 //= require jquery.jcrop
 //= require papercrop
 //= require popper
+//= require owl.carousel
 //= require bootstrap-sprockets
 //= require_tree .
