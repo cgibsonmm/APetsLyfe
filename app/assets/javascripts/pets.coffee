@@ -1,6 +1,6 @@
 # Script for pets
 # Todo: need sizing for screens
-$(document).on('turbolinks:load', ->
+$ ->
   $activePet = $('.pet-0')
   $activeCard = $('.card-0')
   # adds active class to first pet and hides others
@@ -21,4 +21,3 @@ $(document).on('turbolinks:load', ->
       $($activePet).addClass('active')
       $('.pet').not(this).removeClass('active')
     )
-)
