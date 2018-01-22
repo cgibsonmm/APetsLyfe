@@ -1,8 +1,10 @@
 class ImagePostsController < ApplicationController
   def index
+    @posts = ImagePost.all
   end
 
   def new
+    @post = ImagePost.new
   end
 
   def create
