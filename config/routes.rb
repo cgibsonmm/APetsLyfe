@@ -29,6 +29,18 @@
 #
 
 Rails.application.routes.draw do
+  get 'image_posts/index'
+
+  get 'image_posts/new'
+
+  get 'image_posts/create'
+
+  get 'image_posts/edit'
+
+  get 'image_posts/update'
+
+  get 'image_posts/show'
+
   devise_for :users, controllers: { registrations: 'registrations'}
   get 'welcome/index'
   root "home#index"
@@ -36,6 +48,7 @@ Rails.application.routes.draw do
   resources :all_pets, only: [:index]
   resources :user do
     resources :pets
+    resources :image_posts
   end
   resources :user_profiles
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
