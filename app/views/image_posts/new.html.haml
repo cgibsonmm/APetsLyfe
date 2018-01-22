@@ -1,2 +1,6 @@
-%h1 ImagePosts#new
-%p Find me in app/views/image_posts/new.html.haml
+%h1  New Post
+
+= simple_form_for([current_user, @post]) do |f|
+  = f.input :image
+  = f.input :pet, collection: current_pets
+  = f.input :caption
