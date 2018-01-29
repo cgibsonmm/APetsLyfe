@@ -2,5 +2,6 @@
 
 = simple_form_for([current_user, @post]) do |f|
   = f.input :image
-  = f.input :pet, collection: current_pets
+  = f.input :pet, collection: current_pets, class: 'data1'
+  = f.hidden 
   = f.input :caption

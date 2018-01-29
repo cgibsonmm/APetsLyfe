@@ -1,9 +1,9 @@
 module ImagePostsHelper
 
   def current_pets
-    pets = []
+    pets = {}
     current_user.pets.each do |pet|
-      pets << pet
+      pets << 
     end
     pets
   end
