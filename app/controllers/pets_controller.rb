@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
   before_action :authenticate_user!
+  before_action :load_posts
   before_action :find_pet, only: [:show, :edit, :update]
   before_action :pet_owner?, only: [:edit, :update]
 
@@ -47,6 +48,10 @@ class PetsController < ApplicationController
   end
 
   private
+
+  def load_posts
+    @posts = Post.all
+  end
 
   def pet_owner?
     find_pet

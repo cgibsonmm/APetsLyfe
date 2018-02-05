@@ -1,10 +1,10 @@
-%h1.text-center All Pets
+%h1.text-center All Posts
 .row
   .col-2
   .col-8
     - @posts.each do |post|
       .row.card
-        = image_tag post.image.url(:medium), class: 'mt-4 max'
+        = link_to image_tag post.image.url(:medium), class: 'mt-4 img-fluid'
       .row
         %nbdp :
         = post.user.username

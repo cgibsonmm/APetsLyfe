@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: #fefefe;
+  background-color: rgb(228, 228, 228);
 
   .layer {
     background-color: rgba(#ffd65b, .5);
@@ -32,14 +32,12 @@ body {
 
   .main-box {
     background-color: #99c2e1;
-    border: 1px solid black;
     height: 300px;
     width: 100% auto;
   }
 
   .small-box {
     background-color: rgb(141, 105, 152);
-    border: 1px solid #000;
     height: 150px;
     width: 100% auto;
   }
