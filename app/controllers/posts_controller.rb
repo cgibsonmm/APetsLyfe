@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
  before_action :authenticate_user!
+ before_action :find_user
 
   def index
     @posts = current_user.posts.all
@@ -28,5 +29,9 @@ class PostsController < ApplicationController
 
     def post_params
       params.require(:post).permit(:image, :caption)
+    end
+
+    def find_user
+      @user = current_user
     end
 end

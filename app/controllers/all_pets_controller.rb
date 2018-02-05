@@ -1,5 +1,5 @@
 class AllPetsController < ApplicationController
   def index
-    @pets = Post.all
+    @posts = Post.all.order('created_at DESC')
   end
 end

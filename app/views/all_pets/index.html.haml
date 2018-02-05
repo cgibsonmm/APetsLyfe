@@ -1,11 +1,10 @@
 %h1.text-center All Pets
 .row
-  .col-lg-2
-  .col-lg-8
-    .row
-      - @pets.each do |pet|
-        .col-lg-3.col-sm-4.col-6.text-center.pet_container
-          = image_tag pet.avatar.url(:thumb), alt: 'this should be a photo', class: 'img-fluid'
-          = pet.name
-          %nbdp :
-          = pet.user.username
+  .col-2
+  .col-8
+    - @posts.each do |post|
+      .row.card
+        = image_tag post.image.url(:medium), class: 'mt-4 max'
+      .row
+        %nbdp :
+        = post.user.username

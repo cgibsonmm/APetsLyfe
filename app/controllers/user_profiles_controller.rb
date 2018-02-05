@@ -3,10 +3,6 @@ class UserProfilesController < ApplicationController
   before_action :find_profile, only: [:show, :edit, :update]
   before_action :profile_owner?, only: [:edit, :update]
 
-  def index
-    @profiles = UserProfile.all
-  end
-
   def new
     @profile = UserProfile.new
   end
