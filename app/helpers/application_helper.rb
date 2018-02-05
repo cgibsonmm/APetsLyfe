@@ -17,4 +17,8 @@ module ApplicationHelper
       root_path
     end
   end
+
+  def random_image
+    @image = @posts.sample
+  end
 end
