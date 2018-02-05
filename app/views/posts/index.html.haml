@@ -1,8 +1,10 @@
-- @posts.each do |post|
-  = link_to image_tag(post.image.url(:medium)), user_post_path(current_user.id, post), class: 'img-height'
-  %br
-  = post.caption
-  %br
-
-%br
 = link_to 'New Post', new_user_post_path(current_user)
+.row
+  - @posts.each do |post|
+    .col-4
+      = link_to image_tag(post.image.url(:medium)), user_post_path(current_user.id, post), class: 'img-height'
+      %br
+      = post.caption
+      %br
+
+  %br

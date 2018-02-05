@@ -1,10 +1,9 @@
 %h1.text-center All Posts
 .row
-  .col-2
-  .col-8
-    - @posts.each do |post|
-      .row.card
-        = link_to image_tag post.image.url(:medium), class: 'mt-4 img-fluid'
-      .row
-        %nbdp :
-        = post.user.username
+  - @posts.each do |post|
+    .col-4
+      = link_to image_tag(post.image.url(:medium)), user_post_path(post.user_id, post)
+      %br
+      %h5
+        = link_to post.user.username
+      = post.caption
