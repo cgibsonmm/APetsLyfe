@@ -32,6 +32,7 @@ class User < ApplicationRecord
 
   has_one :user_profile
   has_many :pets
+  has_many :posts
 
   validates :username, format: { with: /[a-z]+\d+|[a-z]+\_?[a-z]+\d*/ }
   validates :username, length: { in: 4..12 }

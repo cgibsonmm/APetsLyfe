@@ -1,5 +1,5 @@
 class AllPetsController < ApplicationController
   def index
-    @pets = Pet.all
+    @pets = Post.all
   end
 end

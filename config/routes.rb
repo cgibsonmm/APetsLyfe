@@ -36,6 +36,7 @@ Rails.application.routes.draw do
   resources :all_pets, only: [:index]
   resources :user do
     resources :pets
+    resources :posts
   end
   resources :user_profiles
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
